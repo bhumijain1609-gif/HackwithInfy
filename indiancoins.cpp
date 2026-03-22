@@ -4,7 +4,7 @@ using namespace std;
 int indiancoins(vector <int> coins,int v){
     int n=coins.size();
     int count=0;
-    for(int i=n;i>=0 && v>0 ;i--){
+    for(int i=n-1;i>=0 && v>0 ;i--){
         if(v>=coins[i]){
             count+=v/coins[i];
             v=v%coins[i];
